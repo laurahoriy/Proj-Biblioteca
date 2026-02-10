@@ -1,0 +1,121 @@
+package com.projetoBiblioteca.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+
+public class Fornecedor {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column
+	private String razaoSocial;
+
+	@Column
+	private int nomeFantasia;
+
+	@Column
+	private String cnpj;
+
+	@Column
+	private String endereco;
+
+	@Column
+	private int fone;
+
+	@Column
+	private String email;
+
+	@Column
+	private String inscricaoEstadual;
+
+	public Fornecedor() {
+		super();
+	}
+
+	public Fornecedor(Long id, String razaoSocial, int nomeFantasia, String cnpj, String endereco, int fone,
+			String email, String inscricaoEstadual) {
+		super();
+		this.id = id;
+		this.razaoSocial = razaoSocial;
+		this.nomeFantasia = nomeFantasia;
+		this.cnpj = cnpj;
+		this.endereco = endereco;
+		this.fone = fone;
+		this.email = email;
+		this.inscricaoEstadual = inscricaoEstadual;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getRazaoSocial() {
+		return razaoSocial;
+	}
+
+	public void setRazaoSocial(String razaoSocial) {
+		this.razaoSocial = razaoSocial;
+	}
+
+	public int getNomeFantasia() {
+		return nomeFantasia;
+	}
+
+	public void setNomeFantasia(int nomeFantasia) {
+		this.nomeFantasia = nomeFantasia;
+	}
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public int getFone() {
+		return fone;
+	}
+
+	public void setFone(int fone) {
+		this.fone = fone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getInscricaoEstadual() {
+		return inscricaoEstadual;
+	}
+
+	public void setInscricaoEstadual(String inscricaoEstadual) {
+		this.inscricaoEstadual = inscricaoEstadual;
+	}
+
+}
